@@ -1,4 +1,16 @@
 1. POST vs. PUT
+  the crucial difference is idempotency (identicality on multiple iterations of the call):
+    POST: idempotent -- calling another instance of POST with the exact same request doesn't update the server state (there may be a different response, but the server doesn't change state)
+    PUT: non-idempotent -- calling another instance of PUT with the exact same request will update
+    so, if you are incrementing something, use PUT; if you are adding something unique, use POST
 2. What is Postman?
+    a website to do what curl does
   
-What is next in param
+3. What is next in param?
+    next is a piece of middleware
+4. app.get vs. router.get?
+    there is no real difference here, other than making your code neater.
+    the convention is to break the application into many subparts
+      each subpart will need to get access to the router part of the app. router does that.
+      it also allows own to segment the routes along the lines of the various files (router.get('CONTROLLER/blah/blah', ...)
+    
