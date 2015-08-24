@@ -18,3 +18,5 @@ https://atmospherejs.com/meteor/minimongo
 
 An edit
 another edit
+
+This is something that I think you should care about.
